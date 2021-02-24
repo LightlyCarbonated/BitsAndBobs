@@ -1,0 +1,14 @@
+bill=input("What was the total bill?\n")
+tip=input("What percentage would you like to give?\n")
+split=input("How many people to split the bill?\n")
+
+
+billsplit=float(bill)/int(split)
+billtip=float(billsplit)*(float(tip)/100)
+total= round(billsplit+billtip, 2)
+#Below code bypasses Python default format forcing two decimal results ALWAYS.
+#Added after project.
+total= "{:.2f}".format(total)
+
+
+print(f"\nEach person should pay: ${total}")
